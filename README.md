@@ -7,7 +7,9 @@ This repository contains integration reference for appICE Android SDK. The sampl
 1. Add appICE attributes (APP ID, API KEY, APP KEY) in the Application class.
 
     **<meta-data android:name="com.semusi.analytics.appid" android:value="Your_AppID"/>**
+    
     **<meta-data android:name="com.semusi.analytics.appkey" android:value="Your_AppKey"/>**
+    
     **<meta-data android:name="com.semusi.analytics.apikey" android:value="Your_ApiKey"/>**
   
     NOTE: Login to your appICE account, go to Settings in the left panel of the dashboard. Under App Settings, you will find your APP ID, APP KEY, API KEY.
@@ -15,10 +17,15 @@ This repository contains integration reference for appICE Android SDK. The sampl
 2. Initialize appICE SDK.
 
     **ContextApplication.initSdk(context, mInstance)**
+    
     **// creating config for appICE sdk
-      val config = SdkConfig()
-      config.setAnalyticsTrackingAllowedState(true)
-   // Init sdk with your config
-      Api.startContext(context, config)**
+    
+    **val config = SdkConfig()
+    
+    **config.setAnalyticsTrackingAllowedState(true)
+    
+    **// Init sdk with your config
+    
+    **Api.startContext(context, config)**
       
 3. Replace the dummy **google-services.json** file with your actual file.
