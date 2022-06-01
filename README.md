@@ -10,13 +10,13 @@ This repository contains integration reference for appICE Android SDK. The sampl
    
    **<application ...>**
    
-   **<meta-data android:name="com.semusi.analytics.appid" android:value="Your_AppID"/>**
+    ```<meta-data android:name="com.semusi.analytics.appid" android:value="Your_AppID"/>```
    
-   **<meta-data android:name="com.semusi.analytics.appkey" android:value="Your_AppKey"/>**
+    ```<meta-data android:name="com.semusi.analytics.appkey" android:value="Your_AppKey"/>```
    
-   **<meta-data android:name="com.semusi.analytics.apikey" android:value="Your_ApiKey"/>**
+    ```<meta-data android:name="com.semusi.analytics.apikey" android:value="Your_ApiKey"/>```
  
-   **// for region value**
+    ```// for region value```
 
    **<meta-data  android:name="io.appice.analytics.region"  android:value="US" />**
  
