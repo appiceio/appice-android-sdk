@@ -1,8 +1,8 @@
-**Android SDK Integration Sample**
+## Android SDK Integration Sample
 
 This repository contains integration reference for appICE Android SDK. The sample folder contains sample project for appICE Android SDK integration.
 
-**Sample App Usage**
+### Sample App Usage
 
 1. Add appICE attributes (APP ID, API KEY, APP KEY) in the Application class.
 
