@@ -18,13 +18,13 @@ This repository contains integration reference for appICE Android SDK. The sampl
 
     **ContextApplication.initSdk(context, mInstance)**
     
-    **// creating config for appICE sdk
+    **// creating config for appICE SDK**
     
-    **val config = SdkConfig()
+    **val config = SdkConfig()**
     
-    **config.setAnalyticsTrackingAllowedState(true)
+    **config.setAnalyticsTrackingAllowedState(true)**
     
-    **// Init sdk with your config
+    **// Init SDK with your config**
     
     **Api.startContext(context, config)**
       
