@@ -1,2 +1,2 @@
-# src_android_appice-sdk
+# appice-android-sdk
 For Android SDK code
