@@ -41,3 +41,5 @@ This repository contains integration reference for appICE Android SDK. The sampl
     ```Api.startContext(context, config)```
       
 3. Replace the dummy **google-services.json** file with your actual file.
+
+Thats it!! appICE SDK is successfully integrated in the project and is ready to use.
