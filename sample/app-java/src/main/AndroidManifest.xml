@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appice.sample">
+    <uses-sdk tools:overrideLibrary="com.google.firebase.messaging,com.google.firebase.iid" />
+
+    <uses-permission android:name="anxdroid.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name="com.appice.sample.MainApplication"
+        android:icon="@drawable/appicon"
+        android:label="Production App"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.semusi.analytics.appid"
+            android:value="5bebe93c25d705690ffbc758" />
+        <!-- android:value="5bebe93c25d705690ffbc758" /> -->
+        <meta-data
+            android:name="com.semusi.analytics.appkey"
+            android:value="9e9ec60197c8373a11ac15ce4dae80e973608ab2" />
+        <!-- android:value="9e9ec60197c8373a11ac15ce4dae80e973608ab2" /> -->
+        <meta-data
+            android:name="com.semusi.analytics.apikey"
+            android:value="d985715d1bb48942d36d5d08de3b6a8c" />
+        <!-- android:value="d985715d1bb48942d36d5d08de3b6a8c" /> -->
+        <meta-data
+            android:name="com.semusi.analytics.trackingKey"
+            android:value="key_live_flr516S1R9EAus1kzYwHIddmDBiJv1to" />
+        <meta-data
+            android:name="com.semusi.analytics.region"
+            android:value="US" />
+        <meta-data
+            android:name="APPICE_SSL_PINNING"
+            android:value="0" /> <!-- Play service meta-data -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/appicon" />
+
+        <activity
+            android:name="com.appice.sample.ui.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="pay"
+                    android:scheme="upi" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appice.sample.ui.InboxActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor" />
+
+        <receiver
+            android:name="semusi.geofencing.AIGeofenceReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.appice.android.geofence.fence.update" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.appice.sample.receiver.CampaignCampReceiver"
+            android:exported="true">
+        </receiver>
+        <receiver
+            android:name="semusi.geofencing.LocationUpdateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.appice.android.geofence.location.update" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="semusi.geofencing.AIGeofenceBootReceiver"
+            android:exported="true"
+            tools:replace="android:exported">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="semusi.ruleengine.pushmanager.NotificationEventService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.appice.campaignEvent" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.AppICEFirebaseListener"
+            android:protectionLevel="signature">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="semusi.ruleengine.pushmanager.SdkFcmListenerService"
+            android:protectionLevel="signature">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
