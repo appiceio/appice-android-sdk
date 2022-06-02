@@ -122,6 +122,7 @@
         </service>
         <service
             android:name="com.semusi.services.AppICEFirebaseListener"
+            android:exported="true"
             android:protectionLevel="signature">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -132,6 +133,7 @@
             android:exported="true">
         </receiver>
         <service
+            android:exported="true"
             android:name="semusi.ruleengine.pushmanager.SdkFcmListenerService"
             android:protectionLevel="signature">
             <intent-filter>

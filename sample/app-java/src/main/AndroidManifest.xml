@@ -119,6 +119,7 @@
             </intent-filter>
         </service>
         <service
+            android:exported="true"
             android:name=".services.AppICEFirebaseListener"
             android:protectionLevel="signature">
             <intent-filter>
@@ -126,6 +127,7 @@
             </intent-filter>
         </service>
         <service
+            android:exported="true"
             android:name="semusi.ruleengine.pushmanager.SdkFcmListenerService"
             android:protectionLevel="signature">
             <intent-filter>
