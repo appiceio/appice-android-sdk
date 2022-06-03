@@ -43,3 +43,11 @@ This repository contains integration reference for appICE Android SDK. The sampl
 3. Replace the dummy **google-services.json** file with your actual file.
 
 Thats it!! appICE SDK is successfully integrated in the project and is ready to use.
+
+## Support
+
+For any issues related to SDK integration, contact us at csm@appice.io.
+
+## Product Demo
+
+[Book a demo](https://www.appice.io/mobile-marketing-automation/?utm_source=github&utm_medium=demolink&utm_campaign=schedule-a-demo) to know more about product features.
