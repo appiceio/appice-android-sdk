@@ -50,4 +50,4 @@ For any issues related to SDK integration, contact us at csm@appice.io.
 
 ## Product Demo
 
-[Book a demo](https://www.appice.io/mobile-marketing-automation/?utm_source=github&utm_medium=demolink&utm_campaign=schedule-a-demo) to know more about product features.
+[Schedule a demo](https://www.appice.io/mobile-marketing-automation/?utm_source=github&utm_medium=android&utm_campaign=schedule-a-demo) to know more about product features.
